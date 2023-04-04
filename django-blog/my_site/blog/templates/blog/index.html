@@ -6,20 +6,16 @@
 {% endblock %}
 
 {% block css_files %}
+  <link rel="stylesheet" href="{% static "blog/post.css" %}">
   <link rel="stylesheet" href="{% static "blog/index.css" %}">
 {% endblock %}
 
 {% block content %}
-  <header id="main-navigation">
-    <h1><a href="">Fil's Blog</a></h1>
-    <nav>
-      <a href="">All Posts</a>
-    </nav>
-  </header>
+  
 
   <section id="welcome">
     <header>
-      <img src="" alt="fil's blog"/>
+      <img src="{% static "blog/images/max.jpg" %}" alt="fil's blog"/>
       <h2>FIL'S BLOG</h2>
     </header>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -28,19 +24,7 @@
   <section id="latest-posts">
     <h2>My Latest Posts</h2>
     <ul>
-      <li>
-        <article class="post">
-          <a href="">
-            <img src="" alt="Mountain Hiking"/>
-            <div class="post__content">
-              <h3>Mountain Hiking</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis amet eos necessitatibus voluptates veniam facilis illum provident.
-              </p>
-            </div>
-          </a>
-        </article>
-      </li>
+      {% include "blog/includes/post.html" %}
     </ul>
   </section>
 
