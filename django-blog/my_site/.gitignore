@@ -1,0 +1,14 @@
+django_my_site/
+
+# Arquivos gerados pelo sistema operacional
+*.DS_Store
+Thumbs.db
+
+# Arquivos gerados pelo Django
+*.log
+db.sqlite3
+__pycache__/
+media/
+
+# Arquivos gerados pelo ambiente virtual
+venv/
