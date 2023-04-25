@@ -11,6 +11,8 @@
 {% block main_heading %}{{ meetup_title }}{% endblock %}
 
 {% block body %}
+
+{% if meetup_found %}
   <article>
     <img src="" alt=""/>
 
@@ -32,4 +34,8 @@
       FORM
     </section>
   </article>
+{% else %}
+  <p>No meetup found, sorry!</p>
+{% endif %}
+
 {% endblock %}
