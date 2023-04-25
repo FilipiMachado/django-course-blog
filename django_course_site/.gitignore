@@ -1,0 +1,29 @@
+# Ignore compiled Python files
+*.pyc
+
+# Ignore the virtual environment directory
+venv/
+
+# Ignore the secret key file
+secret_key.txt
+
+# Ignore database files
+*.sqlite3
+
+# Ignore static files
+/staticfiles/
+
+# Ignore media files
+/media/
+
+# Ignore log files
+*.log
+
+# Ignore the debug toolbar's output
+debug_toolbar/
+
+# Ignore cache files
+__pycache__/
+
+# Ignore local settings file
+local_settings.py
