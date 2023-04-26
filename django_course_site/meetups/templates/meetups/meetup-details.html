@@ -2,28 +2,28 @@
 
 {% load static %}
 
-{% block title %}{{ meetup_title }}{% endblock %}
+{% block title %}{{ meetup.title }}{% endblock %}
 
 {% block site_css %}
   <link rel="stylesheet" href="{% static 'meetups/styles/meetup-detail.css' %}"/>
 {% endblock %}
 
-{% block main_heading %}{{ meetup_title }}{% endblock %}
+{% block main_heading %}{{ meetup.title }}{% endblock %}
 
 {% block body %}
 
-{% if meetup_found %}
+{% if meetup %}
   <article>
-    <img src="" alt=""/>
+    <img src="{{ meetup.image.url }}" alt="{{ meetup.title }}"/>
 
     <section id="location">
       <h2>Meetup Location</h2>
-      <address>This meetup takes place in <span>LOCATION</span> (ADDRESS).</address>
+      <address>This meetup takes place in <span>{{ meetup.location.name }}</span> ({{ meetup.location.address }}).</address>
     </section>
 
     <section id="details">
       <h2>What's This Meetup About?</h2>
-      <p>{{ meetup_description }}</p>
+      <p>{{ meetup.description }}</p>
       <footer>
         <p>Need more details? Please <a href="">contact the organizer.</a></p>
       </footer>
